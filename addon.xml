@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.video.in-progress.reset" name="Reset In-Progress status" version="0.0.1" provider-name="amitkeret">
+<addon id="script.module.inprogressreset" name="Reset In-Progress status" version="0.1.0" provider-name="amitkeret">
 	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-		<import addon="script.module.simplejson" version="2.0.10"/>
+		<import addon="xbmc.python"                 version="2.1.0"/>
+    <import addon="xbmc.json"                   version="6.2.0"/>
+    <import addon="xbmc.addon"                  version="12.0.0"/>
+		<import addon="script.module.simplejson"    version="2.0.10"/>
 	</requires>
 	<extension point="xbmc.python.library" library="default.py" />
 	<extension point="xbmc.addon.metadata">
-		<language/>
+		<language></language>
 		<summary lang="en">Reset In-Progress status</summary>
 		<description lang="en">This script will reset a video's "In-Progress" status, eliminating the "Resume from..." dialog when playing the video again.</description>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
-		<forum>-</forum>
-		<source>-</source>
-		<email>amitkeretwork@gmail.com</email>
+		<forum></forum>
+		<source>https://github.com/amitkeret/script.module.in-progress.reset</source>
+		<email>amitkeretwork at gmail dot com</email>
 	</extension>
 </addon>
