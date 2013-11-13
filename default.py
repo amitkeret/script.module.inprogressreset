@@ -12,20 +12,13 @@ def log(txt):
     xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
 
 class Main:
-    def _parse_argv(self):
-        try:
-            params = dict( arg.split( '=' ) for arg in sys.argv[ 1 ].split( '&' ) )
-        except:
-            params = {}
-        self.DBID = int(params.get( 'DBID', False ))
-    
     def __init__(self):
         log('version %s started' % __addonversion__ )
-        self._parse_argv()
+        self.DBID = xbmc.getInfoLabel('ListItem.DBID')
         if self.DBID <> "":
             self._inprogress_reset()
         else:
-            log("No DBID given")
+            log("No DBID found")
 
     def _inprogress_reset(self):
         try:
