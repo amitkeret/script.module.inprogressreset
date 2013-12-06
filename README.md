@@ -7,7 +7,7 @@ Place a control in a media list that calls the script:
 
     <control ...>
       ....
-      <onclick>RunScript(script.module.inprogressreset)</onclick>
+      <onclick>RunScript(script.module.inprogressreset,DBID=$INFO[ListItem.DBID])</onclick>
       ....
     </control>
 
