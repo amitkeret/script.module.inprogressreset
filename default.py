@@ -15,11 +15,18 @@ class Main:
     def __init__(self):
         log('version %s started' % __addonversion__ )
         
-        self.DBID = xbmc.getInfoLabel('ListItem.DBID')
+        self._parse_argv()
         if self.DBID <> '':
             self._inprogress_reset()
         else:
             log('No DBID found')
+    
+    def _parse_argv(self):
+        try:
+            params = dict( arg.split( '=' ) for arg in sys.argv[ 1 ].split( '&' ) )
+        except:
+            params = {}
+        self.DBID = int(params.get( 'DBID', False ))
     
     def _inprogress_reset(self):
         try:
