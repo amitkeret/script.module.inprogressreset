@@ -8,7 +8,7 @@ Forum discussion here: http://forum.xbmc.org/showthread.php?tid=179759
 Place a control in a media list that calls the script:
 
     <control ...>
-      ....
+      <visible>[Container.Content(Episodes) | Container.Content(Movies) ] + system.hasaddon(script.module.inprogressreset) + !SubString(ListItem.PercentPlayed,0,left)</visible>
       <onclick>RunScript(script.module.inprogressreset,DBID=$INFO[ListItem.DBID])</onclick>
       ....
     </control>
