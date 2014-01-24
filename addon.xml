@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="script.module.inprogressreset" name="Reset In-Progress status" version="0.1.2" provider-name="amitkeret">
+<addon id="script.module.inprogressreset" name="Reset In-Progress status" version="0.1.3" provider-name="amitkeret">
 	<requires>
 		<import addon="xbmc.python"                 version="2.1.0"/>
     <import addon="xbmc.json"                   version="6.2.0"/>
@@ -11,6 +11,7 @@
 		<language></language>
 		<summary lang="en">Reset In-Progress status</summary>
 		<description lang="en">This script will reset a video's "In-Progress" status, eliminating the "Resume from..." dialog when playing the video again.</description>
+		<disclaimer>This script MUST be implemented in your skin. Skins with built-in support: Quartz, Quartz Modded</disclaimer>
 		<platform>all</platform>
 		<license>GNU GENERAL PUBLIC LICENSE Version 2, June 1991</license>
 		<forum></forum>
