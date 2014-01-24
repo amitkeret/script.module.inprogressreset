@@ -1,3 +1,6 @@
+v 0.1.2
+- changed add-on type so would show up in add-on browser
+
 v 0.1.1
 - added visibility example to README
 
