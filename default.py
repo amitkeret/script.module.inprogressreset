@@ -14,27 +14,24 @@ def log(txt):
 class Main:
     def __init__(self):
         log('version %s started' % __addonversion__ )
-        
-        self._parse_argv()
-        if self.DBID <> '':
-            self._inprogress_reset()
-        else:
-            log('No DBID found')
-    
+
+        self.DBID = sys.listitem.getProperty('dbid')
+        self._inprogress_reset()
+
     def _parse_argv(self):
         try:
             params = dict( arg.split( '=' ) for arg in sys.argv[ 1 ].split( '&' ) )
         except:
             params = {}
         self.DBID = int(params.get( 'DBID', False ))
-    
+
     def _inprogress_reset(self):
         try:
             xbmc.executeJSONRPC('{"id": 1, "jsonrpc": "2.0", "method": "VideoLibrary.SetMovieDetails", "params": {"movieid": %s, "resume": {"position": 0, "total": 0}}}' % (self.DBID))
         except Exception:
             log('unable to update in-progress state in DBID %s' %s (self.DBID))
             sys.exc_clear()
-    
+
 
 if ( __name__ == '__main__' ):
     Main()
